@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FF Menu VIP</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FF Menu">
+    <link rel="apple-touch-icon" href="https://files.catbox.moe/lqyk4y.jpeg">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://files.catbox.moe/lqyk4y.jpeg">
+
+    <style>
+        :root {
+            --primary: #ff4655;
+            --bg: rgba(10, 10, 10, 0.98);
+            --neon: #00f2ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Chống cuộn trang */
+        }
+
+        #ff-menu {
+            width: 85%;
+            max-width: 320px;
+            background: var(--bg);
+            border: 1.5px solid var(--primary);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 70, 85, 0.5);
+            padding-bottom: 10px;
+        }
+
+        .header-logo {
+            width: 100%;
+            height: 120px;
+            background: url('https://files.catbox.moe/6swmih.png') center/cover;
+            border-radius: 13px 13px 0 0;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+            text-shadow: 0 0 5px var(--primary);
+        }
+
+        .content { padding: 0 20px; }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* Switch Style */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 18px;
+        }
+
+        .switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #333;
+            transition: .3s;
+            border-radius: 34px;
+        }
+
+        input:checked + .slider { background-color: var(--primary); }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px; width: 12px;
+            left: 3px; bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider:before { transform: translateX(16px); }
+
+        .btn-apply {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, var(--primary), #b31217);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(255, 70, 85, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            color: #555;
+            font-size: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="ff-menu">
+    <div class="header-logo"></div>
+    <div class="title">SENSITIVITY VIP v2</div>
+    
+    <div class="content">
+        <div class="option">
+            <span>Auto Headshot 99%</span>
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="option">
+            <span>Fix Lag / Custom DNS</span>
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="option">
+            <span>Dính Tâm (Aimlock)</span>
+            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+        </div>
+        
+        <button class="btn-apply" onclick="apply()">KÍCH HOẠT NGAY</button>
+    </div>
+    
+    <div class="footer">Menu By Hoang Hai>
+		</div>
+</div>
+
+<script>
+    function apply() {
+        alert("Kích Hoạt Thành Công Chúc Chủ Nhân Chơi Game Vui Vẻ😍");
+    }
+    
+    // Ngăn chặn kéo trang để menu cố định như app
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    }, { passive: false });
+</script>
+
+</body>
+</html>
